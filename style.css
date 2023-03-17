@@ -14,6 +14,8 @@
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
+    --color-green: #1fa35c;
+    --color-light-green: #d4ffd4;
 
     /* Font size */
     --font-large: 48px;
@@ -95,7 +97,7 @@ p {
 #navbar {
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-pink);
+    background-color: var(--color-green);
     align-items: center;
     color: var(--color-white);
     padding: 16px;
@@ -137,7 +139,8 @@ p {
 
 /* Home */
 #home {
-    background: url("imgs/home_background.png") center/cover no-repeat;
+    /* background: url("imgs/home_background.png") center/cover no-repeat; */
+    background: linear-gradient(var(--color-green), var(--color-light-green));
     padding: 40px;
     text-align: center;
 }
@@ -237,7 +240,7 @@ p {
 
 /* Skills */
 #skills {
-    background-color: var(--color-yellow);
+    background-color: var(--color-light-green);
 }
 
 .skill {
@@ -427,7 +430,7 @@ p {
 
 /* Contact */
 #contact {
-    background-color: var(--color-pink);
+    background-color: var(--color-green);
 }
 
 .contact__email,
