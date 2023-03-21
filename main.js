@@ -3,7 +3,7 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-// scroll이 될때마다 화살표 함수가 실행되도록 한다.
+// y의 위치(scrollY)가 navbarHeight보다 아래로 내려갈 때 navbar의 배경을 바꾼다.
 document.addEventListener('scroll', () => {
     if (window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--dark');
@@ -28,6 +28,7 @@ document.addEventListener('scroll', () => {
 //     });
 // }
 
+// navbar의 각 버튼을 누를 때마다 각 섹션으로 이동
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
     const target = event.target;
@@ -35,11 +36,20 @@ navbarMenu.addEventListener('click', (event) => {
     if (link === null) {
         return;
     }
-    const scrollTo = document.querySelector(link)
-    scrollTo.scrollIntoView({behavior: "smooth"});
+    scrollIntoView(link);
 })
 
+// Contact Me 버튼을 누르면 contact 섹션으로 이동
 const contactMe = document.querySelector('.home__contact');
+// const contact = document.querySelector('#contact');
+// contactMe.addEventListener('click', () => {
+//     contact.scrollIntoView({behavior: "smooth"});
+// });
 contactMe.addEventListener('click', () => {
-    contact.scrollIntoView();
+    scrollIntoView('#contact');
 });
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+}
