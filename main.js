@@ -58,10 +58,22 @@ const home = document.querySelector('#home');
 const homeChildren = document.querySelectorAll('#home > *');
 const homeHeight = home.getBoundingClientRect().height;
 
-// y의 위치(scrollY)가 내려갈수록 home의 opacity가 올라간다.
+// y의 위치(scrollY)가 내려갈수록 home 의 opacity가 올라간다.
 document.addEventListener('scroll', () => {
     homeChildren.forEach((item) => {
         // item.style.setProperty("opacity", (homeHeight - window.scrollY) / homeHeight);
         item.style.opacity = (homeHeight - window.scrollY) / homeHeight;
     });
+});
+
+const arrowUp = document.querySelector('.arrow-up');
+arrowUp.addEventListener('click', () => {
+    scrollIntoView('#home');
+});
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
 });
