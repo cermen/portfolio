@@ -189,10 +189,15 @@
                 <h1>My Work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn">All<span class="category__count">4</span></button>
-                <button class="category__btn">FE<span class="category__count">2</span></button>
-                <button class="category__btn">BE<span class="category__count">1</span></button>
-                <button class="category__btn">Others<span class="category__count">1</span></button>
+                <!-- <button class="category__btn">All<span class="category__count">4</span></button>
+                <button class="category__btn front-end">FE<span class="category__count">2</span></button>
+                <button class="category__btn back-end">BE<span class="category__count">1</span></button>
+                <button class="category__btn others">Others<span class="category__count">1</span></button> -->
+                
+                <button class="category__btn" data-filter="*">All<span class="category__count">4</span></button>
+                <button class="category__btn" data-filter="front-end">FE<span class="category__count">2</span></button>
+                <button class="category__btn" data-filter="back-end">BE<span class="category__count">1</span></button>
+                <button class="category__btn" data-filter="others">Others<span class="category__count">1</span></button>
             </div>
 
             <div class="work__projects">
@@ -200,10 +205,11 @@
                     href="https://github.com/cermen"
                     class="project"
                     target="blank"
+                    data-type="front-end"
                 >
                     <img
                         class="project__img"
-                        src="imgs/projects/sample.png"
+                        src="imgs/projects/YouTube_Logo_2017.png"
                         alt="Youtube"
                     />
                     <div class="project__description">
@@ -215,21 +221,22 @@
                     href="https://github.com/cermen"
                     class="project"
                     target="blank"
+                    data-type="front-end"
                 >
                     <img
                         class="project__img"
-                        src="imgs/projects/sample.png"
+                        src="imgs/projects/2048.png"
                         alt="Youtube"
                     />
                     <div class="project__description">
-                        <h3>유튜브 클론코딩</h3>
-                        <span>HTML과 CSS를 통한 클론코딩 프로젝트</span>
+                        <h3>2048 게임</h3>
                     </div>
                 </a>
                 <a
                     href="https://github.com/cermen"
                     class="project"
                     target="blank"
+                    data-type="others"
                 >
                     <img
                         class="project__img"
@@ -237,23 +244,24 @@
                         alt="Youtube"
                     />
                     <div class="project__description">
-                        <h3>유튜브 클론코딩</h3>
-                        <span>HTML과 CSS를 통한 클론코딩 프로젝트</span>
+                        <h3>할 일 목록</h3>
+                        <span>할 일 목록 앱 제작 프로젝트</span>
                     </div>
                 </a>
                 <a
                     href="https://github.com/cermen"
                     class="project"
                     target="blank"
+                    data-type="back-end"
                 >
                     <img
                         class="project__img"
-                        src="imgs/projects/sample.png"
+                        src="imgs/projects/Pinterest_Logo.png"
                         alt="Youtube"
                     />
                     <div class="project__description">
-                        <h3>유튜브 클론코딩</h3>
-                        <span>HTML과 CSS를 통한 클론코딩 프로젝트</span>
+                        <h3>핀터레스트 클론코딩</h3>
+                        <span>백엔드 기능을 첨가한 클론코딩 프로젝트</span>
                     </div>
                 </a>
             </div>

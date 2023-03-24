@@ -109,7 +109,7 @@ p {
     /* display: none; */
     opacity: 0;
     pointer-events: none;
-    transition: all 300ms ease-in;
+    transition: all var(--animation-duration) ease-in;
 }
 
 .arrow-up.visible {
@@ -364,13 +364,24 @@ p {
     top: -20px;
     left: 4px;
     opacity: 0;
-    transition: all var(--animation-duration);
+    transition: all var(--animation-duration) ease-in;
 }
 
 .work__projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects .hidden {
+    display: none;
+}
+
+.work__projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -378,6 +389,10 @@ p {
     width: 200px;
     height: 250px;
     margin: 2px;
+}
+
+.project .hidden {
+    display: none;
 }
 
 .project__img {
