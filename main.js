@@ -99,21 +99,36 @@ document.addEventListener("scroll", () => {
 
 // 프로젝트
 const workBtnContainer = document.querySelector(".work__categories");
+// const categoryBtn = document.querySelectorAll('.category__btn');
 const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", (e) => {
     const filter =
         e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    console.log(filter);
+    console.log(typeof filter);
 
     if (filter === null) {
         return;
     }
     projectContainer.classList.add("anim-out");
 
+    // categoryBtn.forEach((category) => {
+    //     if (filter === category.dataset.filter) {
+    //         category.classList.add("active");
+    //     } else {
+    //         category.classList.remove("active");
+    //     }
+    // });
+
+    // 버튼을 누를 때 active 전환
+    const active = document.querySelector('.category__btn.active');
+    active.classList.remove('active');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('active');
+
+
     setTimeout(() => {
         projects.forEach((project) => {
-            console.log(project.dataset.type);
             if (filter === "*" || filter === project.dataset.type) {
                 project.classList.remove("hidden");
             } else {
