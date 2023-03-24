@@ -36,7 +36,14 @@ navbarMenu.addEventListener("click", (event) => {
     if (link === null) {
         return;
     }
+    navbarMenu.classList.remove("open");
     scrollIntoView(link);
+});
+
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+    navbarMenu.classList.toggle("open");
+    console.log(navbarMenu.classList);
 });
 
 // Contact Me 버튼을 누르면 contact 섹션으로 이동
@@ -121,11 +128,11 @@ workBtnContainer.addEventListener("click", (e) => {
     // });
 
     // 버튼을 누를 때 active 전환
-    const active = document.querySelector('.category__btn.active');
-    active.classList.remove('active');
-    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-    target.classList.add('active');
-
+    const active = document.querySelector(".category__btn.active");
+    active.classList.remove("active");
+    const target =
+        e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+    target.classList.add("active");
 
     setTimeout(() => {
         projects.forEach((project) => {
