@@ -4,13 +4,12 @@
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
-    --color-pink: #fe918d;
-    --color-dark-pink: #ff6863;
     --color-black: #4d4d4d;
     --color-dark-grey: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
     --color-blue: #73aace;
+    --color-dark-blue: #558cc3;
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
@@ -228,6 +227,10 @@ p {
     margin: auto;
 }
 
+.section__container > p {
+    font-size: 16pt;
+}
+
 /* about */
 .about__majors {
     display: flex;
@@ -256,9 +259,9 @@ p {
 }
 
 .major__icon:hover i {
-    color: var(--color-pink);
+    color: var(--color-dark-blue);
     /* transform: rotate(); */
-    transform: rotate(-30deg) scale(1.2);
+    transform: scale(1.2);
 }
 
 .major__title,
