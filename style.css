@@ -317,11 +317,16 @@ p {
     margin: 20px 0;
 }
 
-.skillset__title {
-    color: var(--color-white);
+.skillset li {
+    font-size: var(--font-regular);
 }
 
-.skillset__left {
+.skillset__title {
+    color: var(--color-white);
+    font-size: var(--font-medium);
+}
+
+/* .skillset__left {
     flex-basis: 60%;
     background-color: var(--color-dark-grey);
     color: var(--color-light-white);
@@ -342,14 +347,20 @@ p {
 .skill__value {
     height: 3px;
     background-color: var(--color-orange);
-}
+} */
 
 .skillset__right {
     flex-basis: 40%;
 }
 
 .tools {
+    width: 50%;
     background-color: var(--color-grey);
+}
+
+.etc {
+    width: 50%;
+    padding: 20px;
 }
 
 .tools,
